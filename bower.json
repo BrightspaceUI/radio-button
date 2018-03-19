@@ -1,0 +1,28 @@
+{
+  "name": "d2l-radio-button",
+  "description": "Polymer-based web component for D2L radio buttons",
+  "license": "Apache-2.0",
+  "main": "d2l-radio-button.html",
+  "homepage": "https://github.com/BrightspaceUI/radio-button",
+  "ignore": [
+    "test",
+    ".editorconfig",
+    ".eslintrc.json",
+    ".gitignore",
+    ".travis.yml",
+    "CODEOWNERS",
+    "package.json",
+    "wct.conf.json"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.0.0",
+		"d2l-typography": "^6.1.2",
+		"d2l-colors": "^3.1.2"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^3.0.1",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.1.0",
+    "web-component-tester": "Polymer/web-component-tester#^6.5.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.1.0"
+  }
+}

@@ -1,0 +1,37 @@
+<link rel="import" href="../polymer/polymer-element.html">
+<!--
+'d2l-radio-button-spacer'
+Spacer to align secondary content with radio buttons
+
+@demo demo/index.hmtl
+-->
+
+<dom-module id="d2l-radio-button-spacer">
+	<template strip-whitespace>
+		<style>
+			:host {
+				display: block;
+				padding-left: 1.7rem;
+				margin-bottom: 0.9rem;
+			}
+			:host-context([dir="rtl"]) {
+				padding-right: 1.7rem;
+				padding-left: 0;
+			}
+		</style>
+		<slot></slot>
+	</template>
+	<script>
+		class D2LRadioButtonSpacer extends Polymer.Element {
+
+			constructor() {
+				super();
+			}
+
+			static get is() {
+				return 'd2l-radio-button-spacer';
+			}
+		}
+		customElements.define(D2LRadioButtonSpacer.is, D2LRadioButtonSpacer);
+	</script>
+</dom-module>
