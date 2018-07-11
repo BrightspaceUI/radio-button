@@ -112,7 +112,7 @@ Polymer-based web component for D2L radio buttons
 
 			static get properties() {
 				return {
-						/**
+					/**
 					 * Fired when the checked state changes due to user interaction.
 					 *
 					 * @event change
@@ -122,7 +122,7 @@ Polymer-based web component for D2L radio buttons
 					 *
 					 * @event focus
 					*/
-						/**
+					/**
 					 * Gets or sets the [aria-label](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute)
 					 * attribute, which defines a string label for the radio button. Must be used when
 					 * an explicit label (through child elements) isn't provided.
@@ -170,7 +170,7 @@ Polymer-based web component for D2L radio buttons
 						reflectToAttribute: true,
 						value: 'on'
 					}
-				}
+				};
 			}
 
 			focus() {
@@ -190,15 +190,15 @@ Polymer-based web component for D2L radio buttons
 			}
 
 			_handleFocus() {
-			// in shady DOM the input's "focus" event does not bubble,
-			// so no need to fire it
-			if (!Polymer.Settings.useShadow) {
-				this.dispatchEvent(new CustomEvent(
-					'focus',
-					{bubbles: true, composed: false}
-				));
+				// in shady DOM the input's "focus" event does not bubble,
+				// so no need to fire it
+				if (!Polymer.Settings.useShadow) {
+					this.dispatchEvent(new CustomEvent(
+						'focus',
+						{bubbles: true, composed: false}
+					));
+				}
 			}
-		}
 
 		}
 		customElements.define(D2LRadioButton.is, D2LRadioButton);
